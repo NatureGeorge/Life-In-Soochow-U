@@ -1,0 +1,478 @@
+<!DOCTYPE html><html><head>
+      <title>Professional introduction of Bioinformatics</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+      <link rel="stylesheet" href="file:///C:\Users\Nature\.atom\packages\markdown-preview-enhanced\node_modules\@shd101wyy\mume\dependencies\katex\katex.min.css">
+      
+      
+      
+      
+      
+      
+      
+      
+      
+
+      <style> 
+      /**
+ * prism.js Github theme based on GitHub's theme.
+ * @author Sam Clarke
+ */
+code[class*="language-"],
+pre[class*="language-"] {
+  color: #333;
+  background: none;
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 1.4;
+
+  -moz-tab-size: 8;
+  -o-tab-size: 8;
+  tab-size: 8;
+
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+  padding: .8em;
+  overflow: auto;
+  /* border: 1px solid #ddd; */
+  border-radius: 3px;
+  /* background: #fff; */
+  background: #f5f5f5;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+  padding: .1em;
+  border-radius: .3em;
+  white-space: normal;
+  background: #f5f5f5;
+}
+
+.token.comment,
+.token.blockquote {
+  color: #969896;
+}
+
+.token.cdata {
+  color: #183691;
+}
+
+.token.doctype,
+.token.punctuation,
+.token.variable,
+.token.macro.property {
+  color: #333;
+}
+
+.token.operator,
+.token.important,
+.token.keyword,
+.token.rule,
+.token.builtin {
+  color: #a71d5d;
+}
+
+.token.string,
+.token.url,
+.token.regex,
+.token.attr-value {
+  color: #183691;
+}
+
+.token.property,
+.token.number,
+.token.boolean,
+.token.entity,
+.token.atrule,
+.token.constant,
+.token.symbol,
+.token.command,
+.token.code {
+  color: #0086b3;
+}
+
+.token.tag,
+.token.selector,
+.token.prolog {
+  color: #63a35c;
+}
+
+.token.function,
+.token.namespace,
+.token.pseudo-element,
+.token.class,
+.token.class-name,
+.token.pseudo-class,
+.token.id,
+.token.url-reference .token.variable,
+.token.attr-name {
+  color: #795da3;
+}
+
+.token.entity {
+  cursor: help;
+}
+
+.token.title,
+.token.title .token.punctuation {
+  font-weight: bold;
+  color: #1d3e81;
+}
+
+.token.list {
+  color: #ed6a43;
+}
+
+.token.inserted {
+  background-color: #eaffea;
+  color: #55a532;
+}
+
+.token.deleted {
+  background-color: #ffecec;
+  color: #bd2c00;
+}
+
+.token.bold {
+  font-weight: bold;
+}
+
+.token.italic {
+  font-style: italic;
+}
+
+
+/* JSON */
+.language-json .token.property {
+  color: #183691;
+}
+
+.language-markup .token.tag .token.punctuation {
+  color: #333;
+}
+
+/* CSS */
+code.language-css,
+.language-css .token.function {
+  color: #0086b3;
+}
+
+/* YAML */
+.language-yaml .token.atrule {
+  color: #63a35c;
+}
+
+code.language-yaml {
+  color: #183691;
+}
+
+/* Ruby */
+.language-ruby .token.function {
+  color: #333;
+}
+
+/* Markdown */
+.language-markdown .token.url {
+  color: #795da3;
+}
+
+/* Makefile */
+.language-makefile .token.symbol {
+  color: #795da3;
+}
+
+.language-makefile .token.variable {
+  color: #183691;
+}
+
+.language-makefile .token.builtin {
+  color: #0086b3;
+}
+
+/* Bash */
+.language-bash .token.keyword {
+  color: #0086b3;
+}
+
+/* highlight */
+pre[data-line] {
+  position: relative;
+  padding: 1em 0 1em 3em;
+}
+pre[data-line] .line-highlight-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: transparent;
+  display: block;
+  width: 100%;
+}
+
+pre[data-line] .line-highlight {
+  position: absolute;
+  left: 0;
+  right: 0;
+  padding: inherit 0;
+  margin-top: 1em;
+  background: hsla(24, 20%, 50%,.08);
+  background: linear-gradient(to right, hsla(24, 20%, 50%,.1) 70%, hsla(24, 20%, 50%,0));
+  pointer-events: none;
+  line-height: inherit;
+  white-space: pre;
+}
+
+pre[data-line] .line-highlight:before, 
+pre[data-line] .line-highlight[data-end]:after {
+  content: attr(data-start);
+  position: absolute;
+  top: .4em;
+  left: .6em;
+  min-width: 1em;
+  padding: 0 .5em;
+  background-color: hsla(24, 20%, 50%,.4);
+  color: hsl(24, 20%, 95%);
+  font: bold 65%/1.5 sans-serif;
+  text-align: center;
+  vertical-align: .3em;
+  border-radius: 999px;
+  text-shadow: none;
+  box-shadow: 0 1px white;
+}
+
+pre[data-line] .line-highlight[data-end]:after {
+  content: attr(data-end);
+  top: auto;
+  bottom: .4em;
+}html body{font-family:"Helvetica Neue",Helvetica,"Segoe UI",Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#333;background-color:#fff;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#000}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#5c5c5c}html body strong{color:#000}html body del{color:#5c5c5c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ul,html body>ol{margin-bottom:16px}html body ul,html body ol{padding-left:2em}html body ul.no-list,html body ol.no-list{padding:0;list-style-type:none}html body ul ul,html body ul ol,html body ol ol,html body ol ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#5c5c5c;border-left:4px solid #d6d6d6}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#d6d6d6;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:bold;color:#000}html body table td,html body table th{border:1px solid #d6d6d6;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:bold}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em !important;color:#000;background-color:#f0f0f0;border-radius:3px;padding:.2em 0}html body code::before,html body code::after{letter-spacing:-0.2em;content:"\00a0"}html body pre>code{padding:0;margin:0;font-size:.85em !important;word-break:normal;white-space:pre;background:transparent;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;font-size:.85em !important;line-height:1.45;border:#d6d6d6;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:before,html body pre tt:before,html body pre code:after,html body pre tt:after{content:normal}html body p,html body blockquote,html body ul,html body ol,html body dl,html body pre{margin-top:0;margin-bottom:16px}html body kbd{color:#000;border:1px solid #d6d6d6;border-bottom:2px solid #c7c7c7;padding:2px 4px;background-color:#f0f0f0;border-radius:3px}@media print{html body{background-color:#fff}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#000;page-break-after:avoid}html body blockquote{color:#5c5c5c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body pre,html body code{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview .pagebreak,.markdown-preview .newpage{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center !important}.markdown-preview:not([for="preview"]) .code-chunk .btn-group{display:none}.markdown-preview:not([for="preview"]) .code-chunk .status{display:none}.markdown-preview:not([for="preview"]) .code-chunk .output-div{margin-bottom:16px}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0}@media screen and (min-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{font-size:14px !important;padding:1em}}@media print{html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,0.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc ul{padding:0 1.6em;margin-top:.8em}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc li{margin-bottom:.8em}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc ul{list-style-type:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% -  300px);padding:2em calc(50% - 457px -  150px);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+ 
+      </style>
+    </head>
+    <body for="html-export">
+      <div class="mume markdown-preview  ">
+      <h1 class="mume-header" id="%E7%94%9F%E7%89%A9%E4%BF%A1%E6%81%AF%E5%AD%A6%E8%AE%A1%E7%AE%97%E7%94%9F%E7%89%A9%E5%AD%A6-%E4%B8%93%E4%B8%9A%E4%BB%8B%E7%BB%8D">&#x751F;&#x7269;&#x4FE1;&#x606F;&#x5B66;/&#x8BA1;&#x7B97;&#x751F;&#x7269;&#x5B66; &#x4E13;&#x4E1A;&#x4ECB;&#x7ECD;</h1>
+
+<p><strong>Professional Introduction of Bioinformatics/Computational Biology</strong></p>
+<blockquote>
+<p>&#xA9; Copyright 2017-2019, Zhu ZeFeng, Soochow University. Last updated on June 14, 2019.</p>
+</blockquote>
+<h2 class="mume-header" id="content">Content</h2>
+
+<ul>
+<li>&#x5B66;&#x79D1;&#x5206;&#x7C7B;</li>
+<li>&#x80CC;&#x666F;&#x77E5;&#x8BC6;</li>
+<li>&#x5B66;&#x79D1;&#x4ECB;&#x7ECD;</li>
+<li>&#x5B66;&#x79D1;&#x60C5;&#x51B5; <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>&#x2192;</mo></mrow><annotation encoding="application/x-tex">\rightarrow</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.36687em;vertical-align:0em;"></span><span class="mrel">&#x2192;</span></span></span></span> &#x4EE5;&#x82CF;&#x5927;&#x4E3A;&#x4F8B;</li>
+</ul>
+<h3 class="mume-header" id="%E5%AD%A6%E7%A7%91%E5%88%86%E7%B1%BB">&#x5B66;&#x79D1;&#x5206;&#x7C7B;</h3>
+
+<ol>
+<li>&#x7406;&#x5B66;</li>
+<li>&#x6570;&#x636E;&#x79D1;&#x5B66;/&#x8BA1;&#x7B97;&#x79D1;&#x5B66;/&#x4FE1;&#x606F;&#x79D1;&#x5B66;</li>
+<li>&#x4EA4;&#x53C9;&#x5B66;&#x79D1;</li>
+</ol>
+<h3 class="mume-header" id="%E8%83%8C%E6%99%AF%E7%9F%A5%E8%AF%86">&#x80CC;&#x666F;&#x77E5;&#x8BC6;</h3>
+
+<p>&#x4E86;&#x89E3;&#x8FD9;&#x95E8;&#x5B66;&#x79D1;&#x4E4B;&#x524D;&#x4F60;&#x6240;&#x8981;&#x77E5;&#x9053;&#x7684;&#xFF1A;&#x1F31D;</p>
+<ol>
+<li>&#x6570;&#x636E;&#x79D1;&#x5B66;&#x662F;&#x4EC0;&#x4E48;&#xFF1F;&#x6570;&#x636E;&#x79D1;&#x5B66;&#x5B66;&#x79D1;&#x7684;&#x5171;&#x901A;&#x70B9;&#x662F;&#xFF1F;</li>
+<li>&#x4EC0;&#x4E48;&#x662F;&#x5927;&#x6570;&#x636E;&#xFF1F;</li>
+<li>&#x5FAE;&#x79EF;&#x5206;&#x3001;&#x7EBF;&#x6027;&#x4EE3;&#x6570;&#x3001;&#x6982;&#x7387;&#x7EDF;&#x8BA1;&#x5728;&#x7406;&#x5B66;&#x5B66;&#x79D1;&#x91CC;&#x7684;&#x89D2;&#x8272;&#x662F;&#x4EC0;&#x4E48;&#xFF1F;</li>
+<li>&#x7F16;&#x7A0B;&#x662F;&#x4EC0;&#x4E48;&#xFF1F;&#x4E3A;&#x4EC0;&#x4E48;&#x8981;&#x638C;&#x63E1;&#x7F16;&#x7A0B;&#xFF1F;</li>
+<li>&#x4EC0;&#x4E48;&#x662F;&#x7B97;&#x6CD5;&#xFF1F;</li>
+<li>&#x4F55;&#x8C13;&#x5927;&#x5B66;&#xFF1F;</li>
+<li>&#x4EA4;&#x53C9;&#x5B66;&#x79D1;&#x610F;&#x5473;&#x7740;&#x4EC0;&#x4E48;/&#x7279;&#x70B9;&#x662F;&#x4EC0;&#x4E48;&#xFF1F;</li>
+</ol>
+<h3 class="mume-header" id="%E5%AD%A6%E7%A7%91%E4%BB%8B%E7%BB%8D">&#x5B66;&#x79D1;&#x4ECB;&#x7ECD;</h3>
+
+<blockquote>
+<p>Reference&#xFF1A;&#x300A;Bioinformatics&#x300B; &#x79D1;&#x5B66;&#x51FA;&#x7248;&#x793E; T.Charlie Hodgman&#x7B49;</p>
+</blockquote>
+<h4 class="mume-header" id="%E5%AE%9A%E4%B9%89">&#x5B9A;&#x4E49;</h4>
+
+<ul>
+<li><strong>&#x6807;&#x51C6;&#x5B9A;&#x4E49;</strong>&#xFF1A;&#x751F;&#x7269;&#x4FE1;&#x606F;&#x5B66;&#x662F;&#x4E00;&#x95E8;&#x878D;&#x5408;&#x751F;&#x7269;&#x5B66;&#x3001;&#x4FE1;&#x606F;&#x79D1;&#x5B66;&#x548C;&#x6570;&#x5B66;&#x7684;&#x4EA4;&#x53C9;&#x5B66;&#x79D1;</li>
+<li><strong>&#x516C;&#x5171;&#x5B9A;&#x4E49;</strong>&#xFF1A;&#x751F;&#x7269;&#x4FE1;&#x606F;&#x5B66;&#x662F;&#x5E94;&#x7528;&#x8BA1;&#x7B97;&#x548C;&#x6570;&#x5B66;&#x6765;&#x7BA1;&#x7406;&#x3001;&#x5206;&#x6790;&#x3001;&#x7406;&#x89E3;&#x6570;&#x636E;&#x5E76;&#x89E3;&#x51B3;&#x751F;&#x7269;&#x5B66;&#x95EE;&#x9898;&#xFF0C;&#x5176;&#x8FD8;&#x6D89;&#x53CA;&#x533B;&#x5B66;&#x4FE1;&#x606F;&#x5B66;&#x3001;&#x5316;&#x5B66;&#x4FE1;&#x606F;&#x3001;&#x795E;&#x5B66;&#x4FE1;&#x606F;&#x7B49;&#x4FE1;&#x606F;&#x5B66;&#x79D1;</li>
+</ul>
+<h4 class="mume-header" id="%E5%B1%9E%E6%80%A7">&#x5C5E;&#x6027;</h4>
+
+<ul>
+<li><strong>&#x4EA4;&#x53C9;&#x5B66;&#x79D1;&#x7279;&#x5F81;</strong>&#xFF1A;&#x7FFB;&#x8BD1;&#x5458; <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>&#x2192;</mo></mrow><annotation encoding="application/x-tex">\rightarrow</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.36687em;vertical-align:0em;"></span><span class="mrel">&#x2192;</span></span></span></span> &#x201C;&#x4E07;&#x4E8B;&#x901A;&#xFF0C;&#x4E00;&#x4E8B;&#x7CBE;&#x201D;</li>
+<li><strong>&#x521B;&#x65B0;&#x6765;&#x6E90;</strong>&#xFF1A;
+<ul>
+<li>&#x5BF9;&#x6570;&#x5B66;&#x6216;&#x7B97;&#x6CD5;&#x7684;&#x826F;&#x597D;&#x8BA4;&#x77E5;&#x88AB;&#x7528;&#x4E8E;&#x5904;&#x7406;&#x4E00;&#x7C7B;&#x65B0;&#x7684;&#x751F;&#x7269;&#x5B66;&#x6570;&#x636E;</li>
+<li>&#x8BA1;&#x7B97;&#x673A;&#x79D1;&#x5B66;&#x5F00;&#x53D1;&#x51FA;&#x7684;&#x65B0;&#x786C;&#x4EF6;&#x6216;&#x754C;&#x9762;&#x4F7F;&#x5F97;&#x67D0;&#x4E9B;&#x65B9;&#x9762;&#x7684;&#x751F;&#x7269;&#x5B66;&#x901A;&#x8FC7;&#x4FE1;&#x606F;&#x624B;&#x6BB5;&#x66F4;&#x5BB9;&#x6613;&#x5904;&#x7406;</li>
+<li>&#x5F00;&#x53D1;&#x65B0;&#x7684;&#x7B97;&#x6CD5;&#x6216;&#x6570;&#x5B66;&#x6280;&#x672F;&#x6765;&#x7A81;&#x7834;&#x751F;&#x7269;&#x5B66;&#x95EE;&#x9898;&#x7684;&#x4E00;&#x4E9B;&#x74F6;&#x9888;</li>
+</ul>
+</li>
+</ul>
+<h4 class="mume-header" id="%E5%85%B4%E8%B5%B7%E4%B8%8E%E5%BA%94%E7%94%A8">&#x5174;&#x8D77;&#x4E0E;&#x5E94;&#x7528;</h4>
+
+<blockquote>
+<p>Reference&#xFF1A;&#x300A;&#x751F;&#x7269;&#x4FE1;&#x606F;&#x5B66;&#x300B; &#x4EBA;&#x6C11;&#x536B;&#x751F;&#x51FA;&#x7248;&#x793E; &#x7EEA;&#x8BBA; &#x7B2C;&#x4E09;&#x8282; &#x4E09; &#x5927;&#x6570;&#x636E;&#x65F6;&#x4EE3;&#x7684;&#x751F;&#x7269;&#x4FE1;&#x606F;&#x5B66;&#x4E0E;&#x533B;&#x5B66;</p>
+</blockquote>
+<p>21 &#x4E16;&#x7EAA;&#x533B;&#x5B66;&#x5C06;&#x5B8C;&#x6210;&#x4ECE;&#x4EE5;&#x7EC4;&#x7EC7;&#x75C5;&#x7406;&#x5B66;&#x4E3A;&#x57FA;&#x7840;&#x7684;&#x7814;&#x7A76;&#x6A21;&#x5F0F;&#xFF0C;&#x5411;&#x5206;&#x5B50;&#x533B;&#x5B66;&#xFF08;&#x5206;&#x5B50;&#x751F;&#x7269;&#x5B66;&#x3001;&#x5206;&#x5B50;&#x7EC6;&#x80DE;&#x5B66;&#x3001;&#x5206;&#x5B50;&#x836F;&#x7406;&#x5B66;&#x7B49;&#xFF09;&#x6A21;&#x5F0F;&#x8F6C;&#x53D8;&#x3002;&#x91CD;&#x5927;&#x75BE;&#x75C5;&#xFF0C;&#x5982;&#x80BF;&#x74F6;&#x5FC3;&#x8111;&#x8840;&#x7BA1;&#x75BE;&#x75C5;&#x3001;&#x4EE3;&#x8C22;&#x6027;&#x75BE;&#x75C5;&#x7B49;&#x662F;&#x5F53;&#x524D;&#x5371;&#x5BB3;&#x4EBA;&#x7C7B;&#x5065;&#x5EB7;&#x7684;&#x4E3B;&#x8981;&#x56E0;&#x7D20;&#xFF0C;&#x4E5F;&#x662F;&#x751F;&#x7269;&#x533B;&#x5B66;&#x548C;&#x836F;&#x5B66;&#x7684;&#x4E3B;&#x8981;&#x7814;&#x7A76;&#x548C;&#x653B;&#x514B;&#x5BF9;&#x8C61;&#x3002;&#x73B0;&#x4EE3;&#x5206;&#x5B50;&#x751F;&#x7269;&#x5B66;&#x6280;&#x672F;&#x53D1;&#x5C55;&#x548C;&#x7814;&#x7A76;&#x8FDB;&#x5C55;&#x5728;&#x4E00;&#x5B9A;&#x7A0B;&#x5EA6;&#x4E0A;&#x4ECE;&#x5206;&#x5B50;&#x672C;&#x8D28;&#x63ED;&#x793A;&#x4E86;&#x75BE;&#x75C5;&#x6F5C;&#x5728;&#x7684;&#x4F5C;&#x7528;&#x65B9;&#x5F0F;&#x548C;&#x53D1;&#x751F;&#x673A;&#x5236;&#xFF0C;&#x8BC6;&#x522B;&#x4E86;&#x5927;&#x91CF;&#x75BE;&#x75C5;&#x98CE;&#x9669;&#x57FA;&#x56E0;&#x548C;&#x5206;&#x5B50;&#x6807;&#x5FD7;&#xFF0C;&#x4E3A;&#x6DF1;&#x5165;&#x9610;&#x660E;&#x91CD;&#x5927;&#x75BE;&#x75C5;&#x673A;&#x7406;&#x5960;&#x5B9A;&#x4E86;&#x57FA;&#x7840;&#xFF0C;&#x5E76;&#x4E3A;&#x75BE;&#x75C5;&#x6CBB;&#x7597;&#x836F;&#x7269;&#x7684;&#x5F00;&#x53D1;&#x63D0;&#x4F9B;&#x4E86;&#x4F9D;&#x636E;&#x3002;&#x968F;&#x7740;&#x65B0;&#x5174;&#x68C0;&#x6D4B;&#x6280;&#x672F;&#x7684;&#x4E0D;&#x65AD;&#x53D1;&#x5C55;&#xFF0C;&#x751F;&#x7269;&#x5B66;&#x6570;&#x636E;&#x8D44;&#x6E90;&#x6B63;&#x5904;&#x4E8E;&#x6301;&#x7EED;&#x7206;&#x70B8;&#x5F0F;&#x589E;&#x957F;&#xFF0C;&#x4EBA;&#x7C7B;&#x91CD;&#x5927;&#x590D;&#x6742;&#x75BE;&#x75C5;&#x5206;&#x5B50;&#x751F;&#x7269;&#x533B;&#x836F;&#x5B66;&#x6570;&#x636E;&#xFF0C;&#x5305;&#x62EC;&#x57FA;&#x56E0;&#x7EC4;&#x3001;&#x8F6C;&#x5F55;&#x7EC4;&#x3001;&#x53D8;&#x5F02;&#x7EC4;&#x3001;&#x86CB;&#x767D;&#x8D28;&#x7EC4;&#x3001;&#x4EE3;&#x8C22;&#x7EC4;&#x3001;&#x8F6C;&#x5F55;&#x8C03;&#x63A7;&#x3001;&#x86CB;&#x767D;&#x8D28;&#x4E92;&#x4F5C;&#x3001;&#x75C5;&#x539F;&#x751F;&#x7269;&#x5168;&#x57FA;&#x56E0;&#x7EC4;&#x5E8F;&#x5217;&#x3001;&#x4E34;&#x5E8A;&#x75C5;&#x4F8B;&#x8D44;&#x6E90;&#x3001;&#x836F;&#x7269;&#x751F;&#x7269;&#x5B66;&#x6D3B;&#x6027;&#x3001;&#x836F;&#x7269;&#x6BD2;&#x6027;&#x3001;&#x836F;&#x7269;&#x4EE3;&#x8C22;&#x52A8;&#x529B;&#x5B66;&#x6570;&#x636E;&#x7B49;&#x5927;&#x89C4;&#x6A21;&#x7EC4;&#x5B66;&#x6570;&#x636E;&#x5DF1;&#x7ECF;&#x6210;&#x4E3A;&#x75BE;&#x75C5;&#x548C;&#x751F;&#x547D;&#x79D1;&#x5B66;&#x7814;&#x7A76;&#x7684;&#x6838;&#x5FC3;&#x8D44;&#x6E90;&#x3002;</p>
+<p>&#x5728;&#x91CD;&#x5927;&#x75BE;&#x75C5;&#x7684;&#x5206;&#x5B50;&#x673A;&#x5236;&#x7814;&#x7A76;&#x8FC7;&#x7A0B;&#xFF0C;&#x9762;&#x5BF9;&#x6570;&#x4EE5;&#x767E;&#x4E07;&#x8BA1;&#x7684;&#x5C0F;&#x5206;&#x5B50;&#x53CA;&#x5206;&#x5B50;&#x8054;&#x7CFB;&#xFF0C;&#x6570;&#x4EE5;&#x5341;&#x4E07;&#x8BA1;&#x7684;&#x86CB;&#x767D;&#x8D28;&#x53CA;&#x5176;&#x4E92;&#x76F8;&#x4F5C;&#x7528;&#xFF0C;&#x6570;&#x4EE5;&#x4E07;&#x8BA1;&#x7684;&#x57FA;&#x56E0;&#x53CA;&#x5176;&#x591A;&#x6001;&#x5F62;&#x5F0F;&#xFF0C;&#x6570;&#x4EE5;&#x5343;&#x8BA1;&#x7684; microRNA&#x3001;IncRNA &#x7B49;&#x975E;&#x7F16;&#x7801;RNA&#x53CA;&#x5176;&#x8C03;&#x63A7;&#x4F5C;&#x7528;&#xFF0C;&#x5982;&#x4F55;&#x4ECE;&#x4E2D;&#x5224;&#x65AD;&#x54EA;&#x4E9B;&#x5BF9;&#x4E8E;&#x75BE;&#x75C5;&#x662F;&#x6709;&#x610F;&#x4E49;&#x7684;&#xFF0C;&#x54EA;&#x4E9B;&#x662F;&#x75BE;&#x75C5;&#x53D1;&#x751F;&#x7684;&#x542F;&#x52A8;&#x56E0;&#x5B50;&#xFF0E;&#x54EA;&#x4E9B;&#x662F;&#x75BE;&#x75C5;&#x53D1;&#x5C55;&#x8FC7;&#x7A0B;&#x7684;&#x91CD;&#x8981;&#x53C2;&#x4E0E;&#x8005;&#xFF0C;&#x54EA;&#x4E9B;&#x662F;&#x75BE;&#x75C5;&#x5BFC;&#x81F4;&#x7684;&#x7ED3;&#x679C;&#xFF0C;&#x53C8;&#x6709;&#x54EA;&#x4E9B;&#x9690;&#x542B;&#x75BE;&#x75C5;&#x7684;&#x5206;&#x7C7B;&#x4E0E;&#x8D77;&#x6E90;&#x4FE1;&#x606F;&#xFF0C;&#x8FD8;&#x6709;&#x54EA;&#x4E9B;&#x80FD;&#x591F;&#x4E3A;&#x6211;&#x4EEC;&#x6307;&#x660E;&#x8BCA;&#x65AD;&#x548C;&#x6CBB;&#x7597;&#x7684;&#x65B9;&#x5411;&#xFF1F;&#x8981;&#x89E3;&#x7B54;&#x8FD9;&#x4E9B;&#x96BE;&#x9898;&#xFF0C;&#x6211;&#x4EEC;&#x4E0D;&#x5F97;&#x4E0D;&#x8003;&#x8651;&#x8FD0;&#x7528;&#x4F20;&#x7EDF;&#x7684;&#x5B9E;&#x9A8C;&#x548C;&#x7ECF;&#x9A8C;&#x65B9;&#x6CD5;&#xFF0C;&#x662F;&#x5426;&#x80FD;&#x591F;&#x4F5C;&#x51FA;&#x6B63;&#x786E;&#x3001;&#x5168;&#x9762;&#x7684;&#x5224;&#x65AD;&#xFF0C;&#x53C8;&#x662F;&#x5426;&#x4F1A;&#x7BA1;&#x4E2D;&#x7AA5;&#x8C79;&#x6216;&#x8005;&#x76EE;&#x77AA;&#x53E3;&#x5446;&#xFF1F;</p>
+<p>&#x9AD8;&#x901A;&#x91CF;&#x5206;&#x5B50;&#x751F;&#x7269;&#x6280;&#x672F;&#x7684;&#x53D1;&#x5C55;&#xFF0C;&#x4FC3;&#x4F7F;&#x4EBA;&#x4EEC;&#x5BFB;&#x6C42;&#x521B;&#x65B0;&#x6027;&#x7684;&#x5206;&#x6790;&#x65B9;&#x6848;&#xFF0C;&#x9700;&#x8981;&#x5F15;&#x5165;&#x80FD;&#x591F;&#x6709;&#x6548;&#x8865;&#x5145;&#x6216;&#x5F15;&#x9886;&#x73B0;&#x4EE3;&#x751F;&#x7269;&#x533B;&#x5B66;&#x89E3;&#x51B3;&#x95EE;&#x9898;&#x7684;&#x65B0;&#x9014;&#x5F84;&#x548C;&#x65B0;&#x65B9;&#x6CD5;&#xFF0C;&#x80FD;&#x591F;&#x8FD0;&#x7528;&#x5B9A;&#x91CF;&#x3001;&#x5B9A;&#x6027;&#x7684;&#x7B56;&#x7565;&#x548C;&#x903B;&#x8F91;&#x63A8;&#x65AD;&#xFF0C;&#x5B9E;&#x73B0;&#x4ECE;&#x6D77;&#x91CF;&#x7684;&#x6F5C;&#x5728;&#x75BE;&#x75C5;&#x5206;&#x5B50;&#x4FE1;&#x606F;&#x4E2D;&#x627E;&#x5230;&#x6240;&#x9700;&#x7684;&#x4E0E;&#x75BE;&#x75C5;&#x5173;&#x7CFB;&#x6700;&#x5BC6;&#x5207;&#x7684;&#x56E0;&#x7D20;&#xFF0C;&#x8FDB;&#x884C;&#x5F00;&#x521B;&#x6027;&#x7684;&#x7814;&#x7A76;&#x548C;&#x4EA7;&#x4E1A;&#x53D1;&#x5C55;&#x5DE5;&#x4F5C;&#xFF0C;&#x6307;&#x5BFC;&#x57FA;&#x7840;&#x79D1;&#x7814;&#x548C;&#x4E34;&#x5E8A;&#x5B9E;&#x8DF5;&#xFF0E;&#x800C;&#x9762;&#x5411;&#x751F;&#x7269;&#x533B;&#x5B66;&#x5927;&#x6570;&#x636E;&#x8D44;&#x6E90;&#x7684;&#x751F;&#x7269;&#x4FE1;&#x606F;&#x5B66;&#x5206;&#x6790;&#x6280;&#x672F;&#x80FD;&#x591F;&#x4ECE;&#x57FA;&#x56E0;&#x7EC4;&#x5E8F;&#x5217;&#x4E2D;&#x53D1;&#x73B0;&#x75BE;&#x75C5;&#x6F5C;&#x5728;&#x7684;&#x98CE;&#x9669;&#x4F4D;&#x70B9;&#xFF0C;&#x80FD;&#x591F;&#x4ECE;&#x57FA;&#x56E0;&#x8868;&#x8FBE;&#x548C;&#x86CB;&#x767D;&#x8D28;&#x8C31;&#x4FE1;&#x606F;&#x4E2D;&#x53D1;&#x73B0;&#x75BE;&#x75C5;&#x76F8;&#x5173;&#x5F02;&#x5E38;&#x5206;&#x5B50;&#xFF0C;&#x80FD;&#x591F;&#x7CFB;&#x7EDF;&#x6A21;&#x62DF;&#x75BE;&#x75C5;&#x8C03;&#x63A7;&#x8FC7;&#x7A0B;&#x7684;&#x52A8;&#x6001;&#x53D8;&#x5316;&#xFF0C;&#x80FD;&#x591F;&#x8FD0;&#x7528;&#x8BA1;&#x7B97;&#x65B9;&#x6CD5;&#x9884;&#x6D4B;&#x5C0F;&#x5206;&#x5B50;&#x4E0E;&#x9776;&#x86CB;&#x767D;&#xFF08;&#x5982;&#x79BB;&#x5B50;&#x901A;&#x9053;&#x7B49;&#xFF09;&#x4E4B;&#x95F4;&#x7684;&#x76F8;&#x4E92;&#x4F5C;&#x7528;&#xFF0C;&#x80FD;&#x591F;&#x53D1;&#x73B0;&#x75BE;&#x75C5;&#x6761;&#x4EF6;&#x4E0B;&#x7684;&#x901A;&#x8DEF;&#x91CD;&#x6784;&#x548C;&#x751F;&#x7406;&#x5F02;&#x5E38;&#xFF0E;&#x7ECF;&#x8FC7;&#x5341;&#x4F59;&#x5E74;&#x7684;&#x63A2;&#x7D22;&#x548C;&#x53D1;&#x5C55;&#xFF0C;&#x7279;&#x522B;&#x662F;&#x65B0;&#x4E00;&#x4EE3;&#x6D4B;&#x5E8F;&#x6280;&#x672F;&#x7684;&#x5E7F;&#x6CDB;&#x5E94;&#x7528;&#xFF0C;&#x4EE5;&#x751F;&#x7269;&#x533B;&#x5B66;&#x5927;&#x6570;&#x636E;&#x7814;&#x7A76;&#x4E3A;&#x6838;&#x5FC3;&#x7684;&#x751F;&#x7269;&#x4FE1;&#x606F;&#x5B66;&#x6280;&#x672F;&#x5DF2;&#x7ECF;&#x6210;&#x4E3A;&#x73B0;&#x4EE3;&#x91CD;&#x5927;&#x75BE;&#x75C5;&#x7814;&#x7A76;&#x548C;&#x73B0;&#x4EE3;&#x5316;&#x5B9E;&#x9A8C;&#x5BA4;&#x7814;&#x7A76;&#x4F53;&#x7CFB;&#x4E2D;&#x5FC5;&#x4E0D;&#x53EF;&#x5C11;&#x7684;&#x652F;&#x6491;&#x548C;&#x6838;&#x5FC3;&#x529B;&#x91CF;&#x3002;</p>
+<h4 class="mume-header" id="%E5%AE%9E%E4%BE%8B">&#x5B9E;&#x4F8B;</h4>
+
+<h5 class="mume-header" id="%E6%95%B0%E6%8D%AE%E5%BA%93databaseimg-srchttpsfindiconscomfilesicons2352frankfurt32databasepng-width-26-div-alignright">&#x6570;&#x636E;&#x5E93;(Database)<img src="https://findicons.com/files/icons/2352/frankfurt/32/database.png" width="26" div align="right"></h5>
+
+<ul>
+<li>GEO Database(<a href="https://www.ncbi.nlm.nih.gov/gds/">https://www.ncbi.nlm.nih.gov/gds/</a>)</li>
+<li>UniProt(<a href="https://www.uniprot.org/">https://www.uniprot.org/</a>)</li>
+<li>RCSB(<a href="https://www.rcsb.org/">https://www.rcsb.org/</a>)</li>
+<li>Reactome(<a href="https://reactome.org/">https://reactome.org/</a>)</li>
+<li>Interactome3D(<a href="https://interactome3d.irbbarcelona.org">https://interactome3d.irbbarcelona.org</a>)</li>
+<li>...</li>
+</ul>
+<h5 class="mume-header" id="%E6%9C%8D%E5%8A%A1%E5%99%A8serverimg-srchttpsfindiconscomfilesicons2083go_green_web64serverpng-width-26-div-alignright">&#x670D;&#x52A1;&#x5668;(Server)<img src="https://findicons.com/files/icons/2083/go_green_web/64/server.png" width="26" div align="right"></h5>
+
+<ul>
+<li>I-TASSER(<a href="https://zhanglab.ccmb.med.umich.edu/I-TASSER/">https://zhanglab.ccmb.med.umich.edu/I-TASSER/</a>)</li>
+<li>Rosetta(<a href="https://www.rosettacommons.org/docs/latest/getting_started/Getting-Started">https://www.rosettacommons.org/docs/latest/getting_started/Getting-Started</a>)</li>
+<li>...</li>
+</ul>
+<h5 class="mume-header" id="%E5%B7%A5%E5%85%B7tool">&#x5DE5;&#x5177;(Tool)</h5>
+
+<ul>
+<li>BLAST(<a href="https://blast.ncbi.nlm.nih.gov/Blast.cgi">https://blast.ncbi.nlm.nih.gov/Blast.cgi</a>)</li>
+<li>FoldX(<a href="http://foldxsuite.crg.eu/">http://foldxsuite.crg.eu/</a>)</li>
+<li>MutaBind(<a href="https://www.ncbi.nlm.nih.gov/research/mutabind/">https://www.ncbi.nlm.nih.gov/research/mutabind/</a>)</li>
+<li>Pymol(<a href="https://pymol.org/2/">https://pymol.org/2/</a>)</li>
+<li>...</li>
+</ul>
+<h5 class="mume-header" id="%E5%89%8D%E6%B2%BF%E8%BF%9B%E5%B1%95%E7%A4%BA%E4%BE%8B">&#x524D;&#x6CBF;&#x8FDB;&#x5C55;&#x793A;&#x4F8B;</h5>
+
+<blockquote>
+<p>Alpha Fold (<a href="https://deepmind.com/blog/alphafold/">https://deepmind.com/blog/alphafold/</a>)<br>
+<img src="https://storage.googleapis.com/deepmind-live-cms-alt/images/Origami-CASP-181127-r01_fig4-method.width-1500.png" width="65%" div align="center"></p>
+</blockquote>
+<p>&#x7531;Google-DeepMind&#x5F00;&#x53D1;&#xFF0C;&#x4F7F;&#x7528;&#x673A;&#x5668;&#x5B66;&#x4E60;&#x65B9;&#x6CD5;&#x4ECE;&#x86CB;&#x767D;&#x8D28;&#x4E00;&#x7EA7;&#x7ED3;&#x6784;(&#x5E8F;&#x5217;)&#x9884;&#x6D4B;&#x4E09;&#x7EA7;&#x7ED3;&#x6784;(&#x7A7A;&#x95F4;&#x7ED3;&#x6784;)&#x1F44D;<br>
+<img src="https://storage.googleapis.com/deepmind-live-cms-alt/images/Origami-CASP-181127-r01_fig3-results-crop.width-1500.png" width="65%" div align="center"><br>
+<img src="https://storage.googleapis.com/deepmind-live-cms-alt/documents/Origami-CASP-181127-r01_fig3-results-anim-crop.gif" width="65%" div align="center"></p>
+<hr>
+<h5 class="mume-header" id="%E8%AE%BA%E6%96%87%E7%A4%BA%E4%BE%8B">&#x8BBA;&#x6587;&#x793A;&#x4F8B;</h5>
+
+<blockquote>
+<p><strong>A resource of variant effect predictions of single nucleotide variants in model organisms</strong> <em>Omar Wagih1, Marco Galardini1, Bede P Busby1,2, Danish Memon1, Athanasios Typas2 and Pedro Beltrao (<a href="mailto:pbeltrao@ebi.ac.uk">pbeltrao@ebi.ac.uk</a>)1</em><br>
+<a href="http://msb.embopress.org/content/14/12/e8430.long">http://msb.embopress.org/content/14/12/e8430.long</a><br>
+<img src="http://msb.embopress.org/content/msb/14/12/e8430/F6.large.jpg?width=800&amp;height=600&amp;carousel=1" width="65%" div align="center"></p>
+</blockquote>
+<hr>
+<h3 class="mume-header" id="%E5%AD%A6%E7%A7%91%E6%83%85%E5%86%B5-rightarrow-img-srchttpwwwsudaeducnimages2jpg-width-100-div-aligncenter">&#x5B66;&#x79D1;&#x60C5;&#x51B5; <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>&#x2192;</mo></mrow><annotation encoding="application/x-tex">\rightarrow</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.36687em;vertical-align:0em;"></span><span class="mrel">&#x2192;</span></span></span></span> <img src="http://www.suda.edu.cn/images/2.jpg" width="100" div align="center"></h3>
+
+<h4 class="mume-header" id="%E8%AF%BE%E7%A8%8B%E8%AE%BE%E7%BD%AE">&#x8BFE;&#x7A0B;&#x8BBE;&#x7F6E;</h4>
+
+<h5 class="mume-header" id="%E6%95%B0%E7%90%86%E9%80%BB%E8%BE%91%E7%B1%BBimg-srchttpmsbembopressorgcontentmsb127878f1largejpgwidth800height600carousel1-width-50-div-alignright">&#x6570;&#x7406;&#x903B;&#x8F91;&#x7C7B;<img src="http://msb.embopress.org/content/msb/12/7/878/F1.large.jpg?width=800&amp;height=600&amp;carousel=1" width="50%" div align="right"></h5>
+
+<ol>
+<li>&#x8BA1;&#x7B97;&#x601D;&#x7EF4;</li>
+<li>&#x5FAE;&#x79EF;&#x5206;</li>
+<li>&#x7EBF;&#x6027;&#x4EE3;&#x6570;</li>
+<li>&#x6982;&#x7387;&#x8BBA;&#x4E0E;&#x6570;&#x7406;&#x7EDF;&#x8BA1;</li>
+<li>&#x6570;&#x636E;&#x5E93;&#x7CFB;&#x7EDF;&#x539F;&#x7406;(plus &#x5B9E;&#x9A8C;)</li>
+<li>Unix/Linux</li>
+<li>&#x6570;&#x636E;&#x7ED3;&#x6784;&#x4E0E;&#x7B97;&#x6CD5;(plus &#x5B9E;&#x9A8C;)</li>
+<li>&#x673A;&#x5668;&#x5B66;&#x4E60;</li>
+</ol>
+<blockquote>
+<p>Picture Reference: <strong>Deep learning for computational biology</strong> <em>Christof Angermueller, Tanel P&#xE4;rnamaa, Leopold Parts, Oliver Stegle</em></p>
+</blockquote>
+<hr>
+<h5 class="mume-header" id="%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E7%B1%BB">&#x7A0B;&#x5E8F;&#x8BBE;&#x8BA1;&#x7C7B;</h5>
+
+<p>C<img src="https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1560534687055&amp;di=391f6e9e59cd9193dca47cb9e8b5ee2d&amp;imgtype=0&amp;src=http%3A%2F%2Fimage.coolapk.com%2Fapk_logo%2F2016%2F0218%2F97100_1455765366_4905.png" width="26" div align="right"></p>
+<p>Python<img src="https://www.python.org/static/favicon.ico" width="26" div align="right"></p>
+<p>Java (Object Oriented)<img src="https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1560534482263&amp;di=24de03a5c51d218ed206745a0bd98764&amp;imgtype=0&amp;src=http%3A%2F%2Fp0.qhimg.com%2Ft0174dfc0ed2d451c38.png" width="26" div align="right"></p>
+<p>Perl<img src="https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1561129774&amp;di=e3955420a0437093dfe67dc111f28dfc&amp;imgtype=jpg&amp;er=1&amp;src=http%3A%2F%2Fpic.baike.soso.com%2Fp%2F20130710%2F20130710164539-182646990.jpg" width="26" div align="right"></p>
+<p>R<img src="https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=3192077607,427256994&amp;fm=26&amp;gp=0.jpg" width="26" div align="right"></p>
+<p>Web&#x7F16;&#x7A0B;(HTML,CSS,Javascript,PHP)<img src="https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1560534566668&amp;di=62500b25eddf48acffa9629a4eaea362&amp;imgtype=0&amp;src=http%3A%2F%2Fs13.sinaimg.cn%2Fmw690%2F002x5VcBgy71xQ2H3fSec%26690" width="26" div align="right"></p>
+<hr>
+<h5 class="mume-header" id="%E7%90%86%E5%AD%A6%E7%B1%BBimg-srchttpsarsels-cdncomcontentimage1-s20-s0959440x17301100-gr3jpg-width-200-div-alignright">&#x7406;&#x5B66;&#x7C7B;<img src="https://ars.els-cdn.com/content/image/1-s2.0-S0959440X17301100-gr3.jpg" width="200" div align="right"></h5>
+
+<ol>
+<li>&#x65E0;&#x673A;&#x4E0E;&#x5206;&#x6790;&#x5316;&#x5B66;(plus &#x5B9E;&#x9A8C;)</li>
+<li>&#x6709;&#x673A;&#x5316;&#x5B66;(plus &#x5B9E;&#x9A8C;)</li>
+<li>&#x666E;&#x901A;&#x7269;&#x7406;&#x5B66;(plus &#x5B9E;&#x9A8C;)</li>
+<li>&#x751F;&#x7269;&#x5316;&#x5B66;(plus &#x5B9E;&#x9A8C;)</li>
+<li>&#x9057;&#x4F20;&#x5B66;</li>
+<li>&#x7EC6;&#x80DE;&#x751F;&#x7269;&#x5B66;</li>
+<li>&#x5206;&#x5B50;&#x751F;&#x7269;&#x5B66;(plus &#x5B9E;&#x9A8C;)</li>
+</ol>
+<blockquote>
+<p>Picture Reference: <strong>Protein structure-based drug design: from docking to molecular dynamics</strong> <em>Pawe&#x142; &#x15A;led&#x17A;, Amedeo Caflisch</em></p>
+</blockquote>
+<hr>
+<h5 class="mume-header" id="%E4%B8%93%E4%B8%9A%E8%AF%BEimg-srchttpswwwncbinlmnihgovpmcarticlespmc5418815bin13059_2017_1215_fig1_htmljpg-width-200-div-alignright">&#x4E13;&#x4E1A;&#x8BFE;<img src="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5418815/bin/13059_2017_1215_Fig1_HTML.jpg" width="200" div align="right"></h5>
+
+<ol>
+<li>&#x73B0;&#x4EE3;&#x7EDF;&#x8BA1;&#x4E0E;&#x751F;&#x7269;&#x4FE1;&#x606F;&#x5B66;</li>
+<li>&#x751F;&#x7269;&#x4FE1;&#x606F;&#x5B66;&#x7B97;&#x6CD5;</li>
+<li>&#x57FA;&#x56E0;&#x7EC4;&#x4FE1;&#x606F;&#x5B66;</li>
+<li>&#x8868;&#x89C2;&#x7EC4;&#x5B66;</li>
+<li>&#x8F6C;&#x5F55;&#x7EC4;&#x5B66;</li>
+<li>&#x86CB;&#x767D;&#x8D28;&#x7EC4;&#x4FE1;&#x606F;&#x5B66;</li>
+<li>&#x8BA1;&#x7B97;&#x673A;&#x8F85;&#x52A9;&#x836F;&#x7269;&#x53D1;&#x73B0;</li>
+</ol>
+<blockquote>
+<p>Picture Reference: <strong>Multi-omics approaches to disease</strong> <em>Yehudit Hasin,1,3 Marcus Seldin,1 and Aldons Lusis1,2,3</em></p>
+</blockquote>
+<hr>
+<h5 class="mume-header" id="%E9%83%A8%E5%88%86%E9%80%89%E4%BF%AE%E8%AF%BEimg-srchttpsarsels-cdncomcontentimage1-s20-s0167779918300477-gr1jpg-width-200-div-alignright">&#x90E8;&#x5206;&#x9009;&#x4FEE;&#x8BFE;<img src="https://ars.els-cdn.com/content/image/1-s2.0-S0167779918300477-gr1.jpg" width="200" div align="right"></h5>
+
+<ol>
+<li>&#x751F;&#x7269;&#x7EDF;&#x8BA1;&#x5B66;</li>
+<li>&#x86CB;&#x767D;&#x8D28;&#x5316;&#x5B66;</li>
+<li>&#x8FDB;&#x5316;&#x751F;&#x7269;&#x5B66;</li>
+</ol>
+<blockquote>
+<p>Picture Reference: <strong>Dealing with Confounders in Omics Analysis</strong> <em>Wilson Wen Bin Goh 1, Limsoon Wong23</em></p>
+</blockquote>
+<hr>
+<h4 class="mume-header" id="%E5%B0%B1%E4%B8%9A%E6%96%B9%E5%90%91">&#x5C31;&#x4E1A;&#x65B9;&#x5411;</h4>
+
+<ul>
+<li>&#x751F;&#x4FE1;&#x79D1;&#x7814;&#x5DE5;&#x4F5C;&#x8005;</li>
+<li>&#x751F;&#x4FE1;&#x7B97;&#x6CD5;&#x5DE5;&#x7A0B;&#x5E08;</li>
+<li>&#x751F;&#x4FE1;&#x6570;&#x636E;&#x5206;&#x6790;&#x5E08;</li>
+<li>IT&#x4E92;&#x8054;&#x7F51;&#x4ECE;&#x4E1A;&#x4EBA;&#x5458;</li>
+<li>...</li>
+</ul>
+<h4 class="mume-header" id="%E6%9C%80%E6%96%B0%E4%B8%80%E5%B1%8A%E6%AF%95%E4%B8%9A%E7%94%9F%E5%8E%BB%E5%90%91img-srchttpsgss0bdstaticcom-4o3dsag_xi4khgkpowk1hf6hhybaikec03dbaike922c52c52c922c30sign23e02496aeec08fa320d1bf53887560895eef01f3a292df5341d2c3cb2315c6034a87339jpg-width-160-div-alignright">&#x6700;&#x65B0;&#x4E00;&#x5C4A;&#x6BD5;&#x4E1A;&#x751F;&#x53BB;&#x5411;<img src="https://gss0.bdstatic.com/-4o3dSag_xI4khGkpoWK1HF6hhy/baike/c0%3Dbaike92%2C5%2C5%2C92%2C30/sign=23e02496aeec08fa320d1bf538875608/95eef01f3a292df5341d2c3cb2315c6034a87339.jpg" width="160" div align="right"></h4>
+
+<ul>
+<li>&#x4FDD;&#x7814;&#x6D59;&#x5927;&#x8F6F;&#x9662;</li>
+<li>&#x4FDD;&#x7814;&#x540C;&#x6D4E;&#x751F;&#x4FE1;Zhang Lab(&#x76F4;&#x535A;)</li>
+<li>&#x5DDD;&#x5927;&#x751F;&#x4FE1;&#x7814;&#x7A76;&#x751F;</li>
+<li>&#x897F;&#x6E56;&#x5927;&#x5B66;&#x7814;&#x7A76;&#x751F;</li>
+<li>UCI(&#x52A0;&#x5DDE;&#x5927;&#x5B66;&#x6B27;&#x6587;&#x5206;&#x6821;)&#x7814;&#x7A76;&#x751F;</li>
+<li>USC(&#x5357;&#x52A0;&#x5DDE;&#x5927;&#x5B66;)&#x7814;&#x7A76;&#x751F;</li>
+<li>...</li>
+</ul>
+
+      </div>
+      
+      
+    
+    
+    
+    
+    
+    
+    
+    
+  
+    </body></html>
